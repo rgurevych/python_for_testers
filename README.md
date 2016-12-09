@@ -1,2 +1,2 @@
 # python_for_testers
-Homework related to training "Python for testers"
+Repository which contains homeworks related to training "Python for testers"
