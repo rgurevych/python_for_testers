@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from selenium.webdriver.chrome.webdriver import WebDriver
 import time, unittest
+from contact import Contact
 
 def is_alert_present(wd):
     try:
@@ -18,7 +19,6 @@ class test_add_contact(unittest.TestCase):
         wd.get("http://localhost/addressbook/")
 
     def login(self, wd):
-        # login
         wd.find_element_by_name("user").click()
         wd.find_element_by_name("user").clear()
         wd.find_element_by_name("user").send_keys("admin")
@@ -27,22 +27,22 @@ class test_add_contact(unittest.TestCase):
         wd.find_element_by_name("pass").send_keys("secret")
         wd.find_element_by_xpath("//form[@id='LoginForm']/input[3]").click()
 
-    def add_new_contact(self, wd):
-        # start adding contact
+    def add_new_contact(self, wd, contact):
+        # initiate adding contact
         wd.find_element_by_link_text("add new").click()
         # fill in some fields
         wd.find_element_by_name("firstname").click()
         wd.find_element_by_name("firstname").clear()
-        wd.find_element_by_name("firstname").send_keys("Aaaaa")
+        wd.find_element_by_name("firstname").send_keys(contact.first_name)
         wd.find_element_by_name("lastname").click()
         wd.find_element_by_name("lastname").clear()
-        wd.find_element_by_name("lastname").send_keys("Musterman")
+        wd.find_element_by_name("lastname").send_keys(contact.last_name)
         wd.find_element_by_name("mobile").click()
         wd.find_element_by_name("mobile").clear()
-        wd.find_element_by_name("mobile").send_keys("+490123456789")
+        wd.find_element_by_name("mobile").send_keys(contact.mobile_phone)
         wd.find_element_by_name("email").click()
         wd.find_element_by_name("email").clear()
-        wd.find_element_by_name("email").send_keys("tester@test.com")
+        wd.find_element_by_name("email").send_keys(contact.email)
         # create contact
         wd.find_element_by_xpath("//div[@id='content']/form/input[21]").click()
 
@@ -53,7 +53,7 @@ class test_add_contact(unittest.TestCase):
         wd = self.wd
         self.open_homepage(wd)
         self.login(wd)
-        self.add_new_contact(wd)
+        self.add_new_contact(wd, Contact("Mister", "Musterman", "+490123456789", "tester@test.com"))
         self.logout(wd)
 
     def tearDown(self):
