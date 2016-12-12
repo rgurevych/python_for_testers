@@ -1,5 +1,10 @@
 # -*- coding: utf-8 -*-
-from selenium.webdriver.chrome.webdriver import WebDriver
+# для запуска в браузере Chrome откомментить следующую строку:
+# from selenium.webdriver.chrome.webdriver import WebDriver
+
+# для запуска в браузере Firefox откомментить следующие две строки:
+from selenium.webdriver.firefox.webdriver import WebDriver
+from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
 import unittest
 from group import Group
 
@@ -12,7 +17,8 @@ def is_alert_present(wd):
 
 class test_add_group(unittest.TestCase):
     def setUp(self):
-        self.wd = WebDriver()
+        #self.wd = WebDriver()
+        self.wd = WebDriver(firefox_binary=FirefoxBinary("C:/Program Files/Firefox_ESR/firefox.exe"))
         self.wd.implicitly_wait(60)
 
     def open_app_page(self, wd):
