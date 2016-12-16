@@ -4,7 +4,6 @@ class ContactHelper:
     def __init__(self, app):
         self.app = app
 
-
     def add(self, contact):
         wd = self.app.wd
         # initiate adding contact
