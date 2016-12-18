@@ -25,6 +25,7 @@ class ContactHelper:
         # create contact
         wd.find_element_by_xpath("//div[@id='content']/form/input[21]").click()
 
+
     def edit_first_contact(self, contact):
         wd = self.app.wd
         # initiate editing first contact
@@ -44,3 +45,13 @@ class ContactHelper:
         wd.find_element_by_name("email").send_keys(contact.email)
         # complete editing
         wd.find_element_by_name("update").click()
+
+
+    def delete_first_contact(self):
+        wd = self.app.wd
+        #select first contact
+        wd.find_element_by_name("selected[]").click()
+        #delete first contact
+        wd.find_element_by_xpath("//input[@value='Delete']").click()
+        #confirm deletion
+        wd.switch_to_alert().accept()
