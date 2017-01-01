@@ -10,20 +10,25 @@ class ContactHelper:
         # initiate adding contact
         wd.find_element_by_link_text("add new").click()
         # fill in some fields
-        wd.find_element_by_name("firstname").click()
-        wd.find_element_by_name("firstname").clear()
-        wd.find_element_by_name("firstname").send_keys(contact.first_name)
-        wd.find_element_by_name("lastname").click()
-        wd.find_element_by_name("lastname").clear()
-        wd.find_element_by_name("lastname").send_keys(contact.last_name)
-        wd.find_element_by_name("mobile").click()
-        wd.find_element_by_name("mobile").clear()
-        wd.find_element_by_name("mobile").send_keys(contact.mobile_phone)
-        wd.find_element_by_name("email").click()
-        wd.find_element_by_name("email").clear()
-        wd.find_element_by_name("email").send_keys(contact.email)
+        self.fill_contact_from(contact)
         # create contact
         wd.find_element_by_xpath("//div[@id='content']/form/input[21]").click()
+
+
+    def fill_contact_from(self, contact):
+        wd = self.app.wd
+        self.type_in_contact_field("firstname", contact.first_name)
+        self.type_in_contact_field("lastname", contact.last_name)
+        self.type_in_contact_field("mobile", contact.mobile_phone)
+        self.type_in_contact_field("email", contact.email)
+
+
+    def type_in_contact_field(self, field_name, text):
+        wd = self.app.wd
+        if text is not None:
+            wd.find_element_by_name(field_name).click()
+            wd.find_element_by_name(field_name).clear()
+            wd.find_element_by_name(field_name).send_keys(text)
 
 
     def edit_first_contact(self, contact):
@@ -31,18 +36,7 @@ class ContactHelper:
         # initiate editing first contact
         wd.find_element_by_xpath("//img[@alt='Edit']").click()
         # update fields
-        wd.find_element_by_name("firstname").click()
-        wd.find_element_by_name("firstname").clear()
-        wd.find_element_by_name("firstname").send_keys(contact.first_name)
-        wd.find_element_by_name("lastname").click()
-        wd.find_element_by_name("lastname").clear()
-        wd.find_element_by_name("lastname").send_keys(contact.last_name)
-        wd.find_element_by_name("mobile").click()
-        wd.find_element_by_name("mobile").clear()
-        wd.find_element_by_name("mobile").send_keys(contact.mobile_phone)
-        wd.find_element_by_name("email").click()
-        wd.find_element_by_name("email").clear()
-        wd.find_element_by_name("email").send_keys(contact.email)
+        self.fill_contact_from(contact)
         # complete editing
         wd.find_element_by_name("update").click()
 
