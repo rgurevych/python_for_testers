@@ -49,3 +49,8 @@ class ContactHelper:
         wd.find_element_by_xpath("//input[@value='Delete']").click()
         #confirm deletion
         wd.switch_to_alert().accept()
+
+
+    def count(self):
+        wd = self.app.wd
+        return len(wd.find_elements_by_name("selected[]"))
