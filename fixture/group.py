@@ -18,13 +18,13 @@ class GroupHelper:
         # start new group creation
         wd.find_element_by_name("new").click()
         # complete new group creation form
-        self.fill_group_fom(group)
+        self.fill_group_form(group)
         # submit group creation form
         wd.find_element_by_name("submit").click()
         self.return_to_groups_page()
 
 
-    def fill_group_fom(self, group):
+    def fill_group_form(self, group):
         wd = self.app.wd
         self.type_in_group_field("group_name", group.name)
         self.type_in_group_field("group_header", group.header)
@@ -46,7 +46,7 @@ class GroupHelper:
         # initiate editing
         wd.find_element_by_name("edit").click()
         # complete new group creation form
-        self.fill_group_fom(new_group_data)
+        self.fill_group_form(new_group_data)
         # submit group editing
         wd.find_element_by_name("update").click()
         self.return_to_groups_page()
