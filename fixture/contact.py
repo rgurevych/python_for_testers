@@ -9,16 +9,17 @@ class ContactHelper:
 
     def add(self, contact):
         wd = self.app.wd
+        self.open_homepage()
         # initiate adding contact
         wd.find_element_by_link_text("add new").click()
         # fill in some fields
-        self.fill_contact_from(contact)
+        self.fill_contact_form(contact)
         # create contact
         wd.find_element_by_xpath("//div[@id='content']/form/input[21]").click()
         self.return_to_home_page()
 
 
-    def fill_contact_from(self, contact):
+    def fill_contact_form(self, contact):
         wd = self.app.wd
         self.type_in_contact_field("firstname", contact.first_name)
         self.type_in_contact_field("lastname", contact.last_name)
@@ -36,10 +37,11 @@ class ContactHelper:
 
     def edit_first_contact(self, contact):
         wd = self.app.wd
+        self.open_homepage()
         # initiate editing first contact
         wd.find_element_by_xpath("//img[@alt='Edit']").click()
         # update fields
-        self.fill_contact_from(contact)
+        self.fill_contact_form(contact)
         # complete editing
         wd.find_element_by_name("update").click()
         self.return_to_home_page()
@@ -47,6 +49,7 @@ class ContactHelper:
 
     def delete_first_contact(self):
         wd = self.app.wd
+        self.open_homepage()
         #select first contact
         wd.find_element_by_name("selected[]").click()
         #delete first contact
@@ -63,6 +66,12 @@ class ContactHelper:
     def return_to_home_page(self):
         wd = self.app.wd
         wd.find_element_by_link_text("home page").click()
+
+
+    def open_homepage(self):
+        wd = self.app.wd
+        if not wd.current_url.endswith("addressbook/"):
+            wd.find_element_by_link_text("home").click()
 
 
     def get_contacts_list(self):
