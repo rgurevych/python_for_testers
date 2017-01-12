@@ -1,4 +1,4 @@
-
+import re
 from models.contact import Contact
 
 class ContactHelper:
@@ -98,7 +98,6 @@ class ContactHelper:
                 address = cells[3].text
                 emails = cells[4].text
                 phones = cells[5].text.splitlines()
-                print(phones)
                 self.contact_cache.append(Contact(first_name=first_name, last_name=last_name, id=id, address=address,
                                                   home_phone=phones[0], mobile_phone=phones[1], work_phone=phones[2],
                                                   email=emails))
@@ -120,3 +119,16 @@ class ContactHelper:
         id = wd.find_element_by_name("id").get_attribute("value")
         return Contact(first_name=first_name, last_name=last_name, email=email, address=address, home_phone=home_phone,
                        mobile_phone=mobile_phone, work_phone=work_phone, fax=fax, id=id)
+
+
+    def get_contact_data_viewpage(self, index):
+        wd = self.app.wd
+        self.open_homepage()
+        wd.find_elements_by_xpath("//img[@title='Details']")[index].click()
+        text = wd.find_element_by_id("content").text
+        home_phone = re.search("H: (.*)", text).group(1)
+        work_phone = re.search("W: (.*)", text).group(1)
+        mobile_phone = re.search("M: (.*)", text).group(1)
+        fax = re.search("F: (.*)", text).group(1)
+        return Contact(home_phone=home_phone,
+                       mobile_phone=mobile_phone, work_phone=work_phone, fax=fax)
