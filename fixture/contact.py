@@ -97,10 +97,9 @@ class ContactHelper:
                 last_name = cells[1].text
                 address = cells[3].text
                 emails = cells[4].text
-                phones = cells[5].text.splitlines()
+                phones = cells[5].text
                 self.contact_cache.append(Contact(first_name=first_name, last_name=last_name, id=id, address=address,
-                                                  home_phone=phones[0], mobile_phone=phones[1], work_phone=phones[2],
-                                                  email=emails))
+                                                  all_phones_homepage=phones, all_emails_homepage=emails))
         return list(self.contact_cache)
 
 
