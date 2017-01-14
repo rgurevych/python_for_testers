@@ -24,8 +24,14 @@ class ContactHelper:
         wd = self.app.wd
         self.type_in_contact_field("firstname", contact.first_name)
         self.type_in_contact_field("lastname", contact.last_name)
+        self.type_in_contact_field("address", contact.address)
+        self.type_in_contact_field("home", contact.home_phone)
+        self.type_in_contact_field("work", contact.work_phone)
         self.type_in_contact_field("mobile", contact.mobile_phone)
-        self.type_in_contact_field("email", contact.email)
+        self.type_in_contact_field("fax", contact.fax)
+        self.type_in_contact_field("email", contact.email_1)
+        self.type_in_contact_field("email2", contact.email_2)
+        self.type_in_contact_field("email3", contact.email_3)
 
 
     def type_in_contact_field(self, field_name, text):
