@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import pytest
 from models.contact import Contact
-from data.add_contact import testdata
+from data.contacts import testdata
 
 
 @pytest.mark.parametrize("contact", testdata, ids=[repr(x) for x in testdata])
