@@ -1,8 +1,4 @@
 from selenium import webdriver
-# для запуска в браузере Chrome откомментить следующую строку:
-# from selenium.webdriver.chrome.webdriver import WebDriver
-# для запуска в браузере Firefox откомментить следующие две строки:
-# from selenium.webdriver.firefox.webdriver import WebDriver
 from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
 from fixture.session import SessionHelper
 from fixture.group import GroupHelper
