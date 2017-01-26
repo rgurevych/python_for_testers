@@ -93,6 +93,7 @@ class ContactHelper:
 
 
     def get_contacts_list(self):
+        self.open_homepage()
         if self.contact_cache is None:
             wd = self.app.wd
             self.contact_cache = []
