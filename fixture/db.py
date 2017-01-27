@@ -9,8 +9,8 @@ class DbFixture:
         self.name = name
         self.user = user
         self.password = password
-        self.connection = pymysql.connect(host=host, database=name, user=user, password=password)
-        self.connection.autocommit = True
+        self.connection = pymysql.connect(host=host, database=name, user=user, password=password, autocommit=True)
+        #self.connection.autocommit = True
 
 
     def get_group_list(self):
@@ -18,11 +18,12 @@ class DbFixture:
         cursor = self.connection.cursor()
         try:
             cursor.execute("SELECT group_id, group_name, group_header, group_footer FROM group_list")
-            for row in cursor.fetchall():
+            for row in cursor:
                 (id, name, header, footer)=row
                 group_list.append(Group(id=str(id), name=name, header=header, footer=footer))
         finally:
             cursor.close()
+            #self.connection.commit()
         return group_list
 
 
@@ -36,6 +37,7 @@ class DbFixture:
                 contact_list.append(Contact(id=str(id), first_name=first_name, last_name=last_name))
         finally:
             cursor.close()
+            #self.connection.commit()
         return contact_list
 
 

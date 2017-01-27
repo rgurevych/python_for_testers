@@ -50,11 +50,21 @@ class ContactHelper:
     def edit_any_contact(self, contact, index):
         wd = self.app.wd
         self.open_homepage()
-        # initiate editing first contact
+        # initiate editing contact
         wd.find_elements_by_xpath("//img[@alt='Edit']")[index].click()
         # update fields
         self.fill_contact_form(contact)
         # complete editing
+        wd.find_element_by_name("update").click()
+        self.open_homepage()
+        self.contact_cache = None
+
+
+    def edit_contact_by_id(self, contact):
+        wd = self.app.wd
+        self.open_homepage()
+        wd.find_element_by_xpath("//a[@href='edit.php?id=%s']/img" % contact.id).click()
+        self.fill_contact_form(contact)
         wd.find_element_by_name("update").click()
         self.open_homepage()
         self.contact_cache = None
@@ -68,9 +78,18 @@ class ContactHelper:
     def delete_any_contact(self, index):
         wd = self.app.wd
         self.open_homepage()
-        #select first contact
         wd.find_elements_by_name("selected[]")[index].click()
-        #delete first contact
+        wd.find_element_by_xpath("//input[@value='Delete']").click()
+        #confirm deletion
+        wd.switch_to_alert().accept()
+        self.open_homepage()
+        self.contact_cache = None
+
+
+    def delete_contact_by_id(self, id):
+        wd = self.app.wd
+        self.open_homepage()
+        wd.find_element_by_id(id).click()
         wd.find_element_by_xpath("//input[@value='Delete']").click()
         #confirm deletion
         wd.switch_to_alert().accept()
@@ -92,7 +111,7 @@ class ContactHelper:
     contact_cache = None
 
 
-    def get_contacts_list(self):
+    def get_contact_list(self):
         self.open_homepage()
         if self.contact_cache is None:
             wd = self.app.wd

@@ -6,8 +6,8 @@ from random import randrange
 def test_contact_on_homepage(app):
     if app.contact.count() == 0:
         app.contact.add(Contact(first_name="Mister", last_name="Muster", mobile_phone="123", email_1="test@test.com"))
-    index = randrange(len(app.contact.get_contacts_list()))
-    contact_from_homepage = app.contact.get_contacts_list()[index]
+    index = randrange(len(app.contact.get_contact_list()))
+    contact_from_homepage = app.contact.get_contact_list()[index]
     contact_from_editpage = app.contact.get_contact_data_editpage(index)
     assert contact_from_homepage.first_name == contact_from_editpage.first_name
     assert contact_from_homepage.last_name == contact_from_editpage.last_name
