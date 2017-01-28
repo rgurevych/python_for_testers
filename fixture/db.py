@@ -23,7 +23,6 @@ class DbFixture:
                 group_list.append(Group(id=str(id), name=name, header=header, footer=footer))
         finally:
             cursor.close()
-            #self.connection.commit()
         return group_list
 
 
@@ -31,13 +30,15 @@ class DbFixture:
         contact_list = []
         cursor = self.connection.cursor()
         try:
-            cursor.execute("SELECT id, firstname, lastname FROM addressbook WHERE deprecated IS NULL")
+            cursor.execute("SELECT id, firstname, lastname, address, home, mobile, work, email, email2, email3 "
+                           "FROM addressbook WHERE deprecated IS NULL")
             for row in cursor.fetchall():
-                (id, first_name, last_name)=row
-                contact_list.append(Contact(id=str(id), first_name=first_name, last_name=last_name))
+                (id, first_name, last_name, address, home_phone, mobile_phone, work_phone, email_1, email_2, email_3)=row
+                contact_list.append(Contact(id=str(id), first_name=first_name, last_name=last_name, address=address,
+                                            home_phone=home_phone, mobile_phone=mobile_phone, work_phone=work_phone,
+                                            email_1=email_1, email_2=email_2, email_3=email_3))
         finally:
             cursor.close()
-            #self.connection.commit()
         return contact_list
 
 
