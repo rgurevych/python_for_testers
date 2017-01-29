@@ -160,3 +160,25 @@ class ContactHelper:
         fax = re.search("F: (.*)", text).group(1)
         return Contact(home_phone=home_phone,
                        mobile_phone=mobile_phone, work_phone=work_phone, fax=fax)
+
+
+    def add_contact_to_group(self, contact, group):
+        wd = self.app.wd
+        self.open_homepage()
+        wd.find_element_by_id(contact.id).click()
+        wd.find_element_by_name("to_group").click()
+        wd.find_element_by_xpath("//select[@name='to_group']/option[@value='%s']" % group.id).click()
+        wd.find_element_by_xpath("//input[@name='add']").click()
+        self.open_homepage()
+        self.contact_cache = None
+
+
+    def delete_contact_from_group(self, contact, group):
+        wd = self.app.wd
+        self.open_homepage()
+        wd.find_element_by_name("group").click()
+        wd.find_element_by_xpath("//option[@value='%s']" % group.id).click()
+        wd.find_element_by_id(contact.id).click()
+        wd.find_element_by_xpath("//input[@name='remove']").click()
+        self.open_homepage()
+        self.contact_cache = None
