@@ -4,7 +4,7 @@ from models.contact import Contact
 import random
 
 
-def test_edit_first_contact_name(app, db, check_ui):
+def test_edit_contact(app, db, check_ui):
     if len(db.get_contact_list()) == 0:
         app.contact.add(Contact(first_name="Contact_for_editing"))
     old_contacts = db.get_contact_list()
