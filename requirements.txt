@@ -1,7 +1,9 @@
-pytest
+pytest==2.9.0
 pytest_bdd
 jsonpickle
 pony
 pymysql
 selenium==2.53.6
 mysql-connector-python-rf
+lxml-3.7.2-cp35-cp35m-win32.whl
+pytest-allure-adaptor

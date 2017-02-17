@@ -1,0 +1,104 @@
+{
+  "uid" : "3c32db40643c533c",
+  "name" : "test_add_contact[None:GFBVWgdA:Zfah f cm]",
+  "title" : "Test add contact [None:GFBVWgdA:Zfah f cm]",
+  "time" : {
+    "start" : 1487335508145,
+    "stop" : 1487335510941,
+    "duration" : 2796
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 4
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "suite" : {
+    "uid" : "b7dfd0908ba8c492",
+    "name" : "tests.test_add_contact",
+    "title" : "Test add contact"
+  },
+  "steps" : [ {
+    "name" : "Given a contact list",
+    "title" : "Given a contact list",
+    "time" : {
+      "start" : 1487335508299,
+      "stop" : 1487335508301,
+      "duration" : 2
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "Given a new contact",
+    "title" : "Given a new contact",
+    "time" : {
+      "start" : 1487335508301,
+      "stop" : 1487335508301,
+      "duration" : 0
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "When I add the contact to the list",
+    "title" : "When I add the contact to the list",
+    "time" : {
+      "start" : 1487335508301,
+      "stop" : 1487335510937,
+      "duration" : 2636
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "Then the new contact list is equal to the old contact list with the added contact",
+    "title" : "Then the new contact list is equal to the old contact list with the added contact",
+    "time" : {
+      "start" : 1487335510937,
+      "stop" : 1487335510941,
+      "duration" : 4
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  } ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "testIds" : [ ],
+  "labels" : [ {
+    "name" : "host",
+    "value" : "HP_GUREVICH"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "suite-name",
+    "value" : "tests.test_add_contact"
+  }, {
+    "name" : "thread",
+    "value" : "468656-MainThread"
+  } ],
+  "parameters" : [ ]
+}

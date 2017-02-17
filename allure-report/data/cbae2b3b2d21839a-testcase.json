@@ -1,0 +1,104 @@
+{
+  "uid" : "cbae2b3b2d21839a",
+  "name" : "test_add_contact[None::]",
+  "title" : "Test add contact [None::]",
+  "time" : {
+    "start" : 1487335491978,
+    "stop" : 1487335508143,
+    "duration" : 16165
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 4
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "suite" : {
+    "uid" : "b7dfd0908ba8c492",
+    "name" : "tests.test_add_contact",
+    "title" : "Test add contact"
+  },
+  "steps" : [ {
+    "name" : "Given a contact list",
+    "title" : "Given a contact list",
+    "time" : {
+      "start" : 1487335506545,
+      "stop" : 1487335506547,
+      "duration" : 2
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "Given a new contact",
+    "title" : "Given a new contact",
+    "time" : {
+      "start" : 1487335506547,
+      "stop" : 1487335506547,
+      "duration" : 0
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "When I add the contact to the list",
+    "title" : "When I add the contact to the list",
+    "time" : {
+      "start" : 1487335506547,
+      "stop" : 1487335508139,
+      "duration" : 1592
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "Then the new contact list is equal to the old contact list with the added contact",
+    "title" : "Then the new contact list is equal to the old contact list with the added contact",
+    "time" : {
+      "start" : 1487335508139,
+      "stop" : 1487335508142,
+      "duration" : 3
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  } ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "testIds" : [ ],
+  "labels" : [ {
+    "name" : "host",
+    "value" : "HP_GUREVICH"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "suite-name",
+    "value" : "tests.test_add_contact"
+  }, {
+    "name" : "thread",
+    "value" : "468656-MainThread"
+  } ],
+  "parameters" : [ ]
+}

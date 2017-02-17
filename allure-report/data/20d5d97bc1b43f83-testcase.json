@@ -1,0 +1,44 @@
+{
+  "uid" : "20d5d97bc1b43f83",
+  "name" : "test_add_contact[None::]",
+  "title" : "Test add contact [None::]",
+  "time" : {
+    "start" : 1487333416952,
+    "stop" : 1487333433785,
+    "duration" : 16833
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 0
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "suite" : {
+    "uid" : "fa85ebdb2bb7f8fb",
+    "name" : "tests.test_add_contact",
+    "title" : "Test add contact"
+  },
+  "steps" : [ ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "testIds" : [ ],
+  "labels" : [ {
+    "name" : "thread",
+    "value" : "466480-MainThread"
+  }, {
+    "name" : "host",
+    "value" : "HP_GUREVICH"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "suite-name",
+    "value" : "tests.test_add_contact"
+  } ],
+  "parameters" : [ ]
+}

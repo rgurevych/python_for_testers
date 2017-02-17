@@ -1,0 +1,44 @@
+{
+  "uid" : "3052442752c7cfe2",
+  "name" : "test_add_contact[None:j2:VnmL JrGM]",
+  "title" : "Test add contact [None:j2:VnmL JrGM]",
+  "time" : {
+    "start" : 1487333449511,
+    "stop" : 1487333452448,
+    "duration" : 2937
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 0
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "suite" : {
+    "uid" : "fa85ebdb2bb7f8fb",
+    "name" : "tests.test_add_contact",
+    "title" : "Test add contact"
+  },
+  "steps" : [ ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "testIds" : [ ],
+  "labels" : [ {
+    "name" : "thread",
+    "value" : "466480-MainThread"
+  }, {
+    "name" : "host",
+    "value" : "HP_GUREVICH"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "suite-name",
+    "value" : "tests.test_add_contact"
+  } ],
+  "parameters" : [ ]
+}

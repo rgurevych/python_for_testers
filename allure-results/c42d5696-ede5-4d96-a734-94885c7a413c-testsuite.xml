@@ -1,0 +1,216 @@
+<ns0:test-suite xmlns:ns0="urn:model.allure.qatools.yandex.ru" start="1487335491978" stop="1487335521606">
+  <name>tests.test_add_contact</name>
+  <test-cases>
+    <test-case start="1487335491978" status="passed" stop="1487335508143">
+      <name>test_add_contact[None::]</name>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="468656-MainThread"/>
+        <label name="host" value="HP_GUREVICH"/>
+      </labels>
+      <steps>
+        <step start="1487335506545" status="passed" stop="1487335506547">
+          <name>Given a contact list</name>
+          <title>Given a contact list</title>
+          <steps/>
+          <attachments/>
+        </step>
+        <step start="1487335506547" status="passed" stop="1487335506547">
+          <name>Given a new contact</name>
+          <title>Given a new contact</title>
+          <steps/>
+          <attachments/>
+        </step>
+        <step start="1487335506547" status="passed" stop="1487335508139">
+          <name>When I add the contact to the list</name>
+          <title>When I add the contact to the list</title>
+          <steps/>
+          <attachments/>
+        </step>
+        <step start="1487335508139" status="passed" stop="1487335508142">
+          <name>Then the new contact list is equal to the old contact list with the added contact</name>
+          <title>Then the new contact list is equal to the old contact list with the added contact</title>
+          <steps/>
+          <attachments/>
+        </step>
+      </steps>
+      <attachments/>
+    </test-case>
+    <test-case start="1487335508145" status="passed" stop="1487335510941">
+      <name>test_add_contact[None:GFBVWgdA:Zfah f cm]</name>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="468656-MainThread"/>
+        <label name="host" value="HP_GUREVICH"/>
+      </labels>
+      <steps>
+        <step start="1487335508299" status="passed" stop="1487335508301">
+          <name>Given a contact list</name>
+          <title>Given a contact list</title>
+          <steps/>
+          <attachments/>
+        </step>
+        <step start="1487335508301" status="passed" stop="1487335508301">
+          <name>Given a new contact</name>
+          <title>Given a new contact</title>
+          <steps/>
+          <attachments/>
+        </step>
+        <step start="1487335508301" status="passed" stop="1487335510937">
+          <name>When I add the contact to the list</name>
+          <title>When I add the contact to the list</title>
+          <steps/>
+          <attachments/>
+        </step>
+        <step start="1487335510937" status="passed" stop="1487335510941">
+          <name>Then the new contact list is equal to the old contact list with the added contact</name>
+          <title>Then the new contact list is equal to the old contact list with the added contact</title>
+          <steps/>
+          <attachments/>
+        </step>
+      </steps>
+      <attachments/>
+    </test-case>
+    <test-case start="1487335510942" status="passed" stop="1487335513411">
+      <name>test_add_contact[None:n 0:eXIkMp9GZQ pC]</name>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="468656-MainThread"/>
+        <label name="host" value="HP_GUREVICH"/>
+      </labels>
+      <steps>
+        <step start="1487335511077" status="passed" stop="1487335511080">
+          <name>Given a contact list</name>
+          <title>Given a contact list</title>
+          <steps/>
+          <attachments/>
+        </step>
+        <step start="1487335511080" status="passed" stop="1487335511080">
+          <name>Given a new contact</name>
+          <title>Given a new contact</title>
+          <steps/>
+          <attachments/>
+        </step>
+        <step start="1487335511080" status="passed" stop="1487335513401">
+          <name>When I add the contact to the list</name>
+          <title>When I add the contact to the list</title>
+          <steps/>
+          <attachments/>
+        </step>
+        <step start="1487335513401" status="passed" stop="1487335513410">
+          <name>Then the new contact list is equal to the old contact list with the added contact</name>
+          <title>Then the new contact list is equal to the old contact list with the added contact</title>
+          <steps/>
+          <attachments/>
+        </step>
+      </steps>
+      <attachments/>
+    </test-case>
+    <test-case start="1487335513412" status="passed" stop="1487335516149">
+      <name>test_add_contact[None:oJbw:Yq1v R BNLK]</name>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="468656-MainThread"/>
+        <label name="host" value="HP_GUREVICH"/>
+      </labels>
+      <steps>
+        <step start="1487335513665" status="passed" stop="1487335513667">
+          <name>Given a contact list</name>
+          <title>Given a contact list</title>
+          <steps/>
+          <attachments/>
+        </step>
+        <step start="1487335513667" status="passed" stop="1487335513667">
+          <name>Given a new contact</name>
+          <title>Given a new contact</title>
+          <steps/>
+          <attachments/>
+        </step>
+        <step start="1487335513667" status="passed" stop="1487335516145">
+          <name>When I add the contact to the list</name>
+          <title>When I add the contact to the list</title>
+          <steps/>
+          <attachments/>
+        </step>
+        <step start="1487335516145" status="passed" stop="1487335516149">
+          <name>Then the new contact list is equal to the old contact list with the added contact</name>
+          <title>Then the new contact list is equal to the old contact list with the added contact</title>
+          <steps/>
+          <attachments/>
+        </step>
+      </steps>
+      <attachments/>
+    </test-case>
+    <test-case start="1487335516150" status="passed" stop="1487335518836">
+      <name>test_add_contact[None:LJ EFx:avD 3TBh]</name>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="468656-MainThread"/>
+        <label name="host" value="HP_GUREVICH"/>
+      </labels>
+      <steps>
+        <step start="1487335516274" status="passed" stop="1487335516276">
+          <name>Given a contact list</name>
+          <title>Given a contact list</title>
+          <steps/>
+          <attachments/>
+        </step>
+        <step start="1487335516276" status="passed" stop="1487335516276">
+          <name>Given a new contact</name>
+          <title>Given a new contact</title>
+          <steps/>
+          <attachments/>
+        </step>
+        <step start="1487335516276" status="passed" stop="1487335518832">
+          <name>When I add the contact to the list</name>
+          <title>When I add the contact to the list</title>
+          <steps/>
+          <attachments/>
+        </step>
+        <step start="1487335518832" status="passed" stop="1487335518836">
+          <name>Then the new contact list is equal to the old contact list with the added contact</name>
+          <title>Then the new contact list is equal to the old contact list with the added contact</title>
+          <steps/>
+          <attachments/>
+        </step>
+      </steps>
+      <attachments/>
+    </test-case>
+    <test-case start="1487335518837" status="passed" stop="1487335521606">
+      <name>test_add_contact[None:j2:VnmL JrGM]</name>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="468656-MainThread"/>
+        <label name="host" value="HP_GUREVICH"/>
+      </labels>
+      <steps>
+        <step start="1487335518966" status="passed" stop="1487335518968">
+          <name>Given a contact list</name>
+          <title>Given a contact list</title>
+          <steps/>
+          <attachments/>
+        </step>
+        <step start="1487335518968" status="passed" stop="1487335518968">
+          <name>Given a new contact</name>
+          <title>Given a new contact</title>
+          <steps/>
+          <attachments/>
+        </step>
+        <step start="1487335518968" status="passed" stop="1487335521599">
+          <name>When I add the contact to the list</name>
+          <title>When I add the contact to the list</title>
+          <steps/>
+          <attachments/>
+        </step>
+        <step start="1487335521599" status="passed" stop="1487335521605">
+          <name>Then the new contact list is equal to the old contact list with the added contact</name>
+          <title>Then the new contact list is equal to the old contact list with the added contact</title>
+          <steps/>
+          <attachments/>
+        </step>
+      </steps>
+      <attachments/>
+    </test-case>
+  </test-cases>
+  <labels/>
+</ns0:test-suite>

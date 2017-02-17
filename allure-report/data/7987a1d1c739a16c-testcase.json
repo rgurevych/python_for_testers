@@ -1,0 +1,44 @@
+{
+  "uid" : "7987a1d1c739a16c",
+  "name" : "test_delete_any_contact",
+  "title" : "Test delete any contact",
+  "time" : {
+    "start" : 1487332721358,
+    "stop" : 1487332729718,
+    "duration" : 8360
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 0
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "suite" : {
+    "uid" : "65b5a481cf4e2e75",
+    "name" : "tests.test_delete_contact",
+    "title" : "Test delete contact"
+  },
+  "steps" : [ ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "testIds" : [ ],
+  "labels" : [ {
+    "name" : "host",
+    "value" : "HP_GUREVICH"
+  }, {
+    "name" : "thread",
+    "value" : "468568-MainThread"
+  }, {
+    "name" : "suite-name",
+    "value" : "tests.test_delete_contact"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  } ],
+  "parameters" : [ ]
+}
